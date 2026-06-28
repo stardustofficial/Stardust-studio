@@ -1,134 +1,235 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STARDUST | Official Hub</title>
+    <title>STARDUST | Global Technology & Interactive Ecosystem</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
         html { scroll-behavior: smooth; }
-        .hero-bg {
-            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+        body { font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        .gradient-canvas {
+            background: radial-gradient(circle at top right, #f8fafc, #eff6ff 40%, #ffffff 80%);
+        }
+        .enterprise-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .enterprise-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+            border-color: #cbd5e1;
         }
     </style>
 </head>
-<body class="bg-slate-900 text-slate-100 font-sans">
+<body class="bg-[#ffffff] text-slate-900 antialiased selection:bg-blue-600 selection:text-white">
 
-    <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/70 border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-black tracking-wider text-indigo-400">STARDUST</div>
-            <nav class="hidden md:flex space-x-8 text-sm font-medium">
-                <a href="#hero" class="hover:text-indigo-400 transition">Home</a>
-                <a href="#about" class="hover:text-indigo-400 transition">About</a>
-                <a href="#products" class="hover:text-indigo-400 transition">Our Webs & Games</a>
-                <a href="#updates" class="hover:text-indigo-400 transition">Updates</a>
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            
+            <a href="#hero" class="flex items-center space-x-3 group">
+                <svg class="w-7 h-7 text-blue-600 transition-transform duration-500 group-hover:scale-110" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"/>
+                </svg>
+                <span class="text-xl font-black tracking-[0.25em] text-slate-900 uppercase">Stardust</span>
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-10 text-xs font-semibold tracking-wider uppercase text-slate-600">
+                <a href="#ecosystem" class="hover:text-blue-600 transition-colors">Web Applications</a>
+                <a href="#gaming" class="hover:text-blue-600 transition-colors">Gaming Network</a>
+                <a href="#updates" class="hover:text-blue-600 transition-colors">Press & Intelligence</a>
             </nav>
+
+            <div class="hidden sm:block">
+                <a href="#ecosystem" class="px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-slate-900 hover:bg-blue-600 shadow-sm transition-all duration-300">
+                    Access Infrastructure
+                </a>
+            </div>
         </div>
     </header>
 
-    <section id="hero" class="hero-bg min-h-screen flex items-center justify-center text-center px-4">
-        <div class="max-w-3xl">
-            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Shaping The Digital Universe
+    <section id="hero" class="relative min-h-[85vh] flex items-center gradient-canvas px-6 overflow-hidden border-b border-slate-100">
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f080_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f080_1px,transparent_1px)] bg-[size:3.5rem_3.5rem]"></div>
+        
+        <div class="relative max-w-5xl mx-auto text-center z-10 py-12">
+            <div class="inline-flex items-center space-x-2 px-3 py-1.5 mb-8 rounded-full bg-blue-50 border border-blue-200/60 text-xs font-semibold tracking-wide text-blue-700">
+                <span class="flex h-1.5 w-1.5 relative">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-blue-600"></span>
+                </span>
+                <span>Global Deployment Master Console Active</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-black tracking-tight mb-8 text-slate-900 leading-[1.1]">
+                Architecting Global Digital Platforms & <br class="hidden md:inline"/>
+                <span class="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">Immersive Experiences</span>
             </h1>
-            <p class="text-lg md:text-xl text-slate-400 mb-8">
-                Welcome to STARDUST. We build innovative web applications, immersive games, and digital experiences. Everything we create, all in one place.
+            
+            <p class="max-w-3xl mx-auto text-base sm:text-lg text-slate-500 mb-12 font-medium leading-relaxed">
+                STARDUST operates as an enterprise framework for high-throughput network applications, cloud infrastructure products, and cross-platform interactive gaming systems deployed globally.
             </p>
-            <div class="flex justify-center gap-4">
-                <a href="#products" class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-6 py-3 rounded-lg shadow-lg transition">
-                    Explore Our Projects
+
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#ecosystem" class="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-sm bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-600/10 transition-all duration-300 inline-flex items-center justify-center gap-2 group">
+                    <span>Explore Web Platforms</span>
+                    <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                    </svg>
                 </a>
-                <a href="#updates" class="border border-slate-700 hover:bg-slate-800 text-slate-300 font-semibold px-6 py-3 rounded-lg transition">
-                    Latest Updates
+                <a href="#gaming" class="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-sm bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 shadow-sm transition-all duration-300 inline-flex items-center justify-center gap-2">
+                    <span>Launch Game Ecosystem</span>
                 </a>
             </div>
         </div>
     </section>
 
-    <section id="about" class="py-24 px-6 max-w-5xl mx-auto">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">About STARDUST</h2>
-            <div class="h-1 w-20 bg-indigo-500 mx-auto rounded"></div>
+    <section class="bg-slate-50/50 border-b border-slate-200/60 py-16 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+                <div class="text-3xl font-extrabold text-slate-900 mb-1">0ms</div>
+                <div class="text-[11px] font-bold text-slate-400 tracking-widest uppercase">Edge Overlap Latency</div>
+            </div>
+            <div>
+                <div class="text-3xl font-extrabold text-slate-900 mb-1">100%</div>
+                <div class="text-[11px] font-bold text-slate-400 tracking-widest uppercase">Stateless Distribution</div>
+            </div>
+            <div>
+                <div class="text-3xl font-extrabold text-slate-900 mb-1">99.99%</div>
+                <div class="text-[11px] font-bold text-slate-400 tracking-widest uppercase">Ecosystem Core Uptime</div>
+            </div>
+            <div>
+                <div class="text-3xl font-extrabold text-slate-900 mb-1">Secure</div>
+                <div class="text-[11px] font-bold text-slate-400 tracking-widest uppercase">End-to-End Cryptography</div>
+            </div>
         </div>
-        <p class="text-slate-400 text-lg text-center leading-relaxed">
-            STARDUST ek modern digital company hai jo user-friendly websites aur exciting games banane me believe karti hai. Humara maqsad naye ideas ko generate karna aur unhe web ki madad se logo tak pahunchana hai. GitHub Pages ke zariye hum high-performance aur secure webs deploy karte hain.
-        </p>
     </section>
 
-    <section id="products" class="py-24 bg-slate-950 px-6">
+    <section id="ecosystem" class="py-28 px-6 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-6">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-[0.25em] text-blue-600">Product Division</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-2">Enterprise Web Applications</h2>
+            </div>
+            <p class="max-w-md text-sm text-slate-500 font-medium leading-relaxed">
+                Central distribution matrix for custom tooling engines, dynamic production software, and global network management frames.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <div class="enterprise-card p-8 sm:p-10 rounded-2xl flex flex-col justify-between group">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 mb-8">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">Central Command Suite</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-8">
+                        Analytical dashboard setup optimized to process operational logistics, monitor static server frameworks, and manage multi-tenant user data streams.
+                    </p>
+                </div>
+                <a href="#" class="inline-flex items-center gap-2 text-xs font-bold tracking-wider uppercase text-slate-900 hover:text-blue-600 transition-colors">
+                    <span>Initialize Portal Interface</span>
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="enterprise-card p-8 sm:p-10 rounded-2xl flex flex-col justify-between group">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-purple-50 border border-purple-100 flex items-center justify-center text-purple-600 mb-8">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M11 3.055A9.003 9.003 0 1020.945 13H11V3.055z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-purple-600 transition-colors">Global Metrics Engine</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-8">
+                        High-efficiency computation tool mapping analytical configurations, global platform access, and cloud processing speeds across target nodes.
+                    </p>
+                </div>
+                <a href="#" class="inline-flex items-center gap-2 text-xs font-bold tracking-wider uppercase text-slate-900 hover:text-purple-600 transition-colors">
+                    <span>Launch Metrics System</span>
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                    </svg>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="gaming" class="py-24 bg-slate-50 border-y border-slate-200/80 px-6">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Ecosystem</h2>
-                <p class="text-slate-400">Hamare saare webs aur games yahan se access karein</p>
+            <div class="text-center max-w-2xl mx-auto mb-20">
+                <span class="text-xs font-bold uppercase tracking-[0.25em] text-indigo-600">Entertainment Systems</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-2 mb-4">High-Fidelity Interactive Studio</h2>
+                <div class="h-1 w-12 bg-blue-600 mx-auto rounded-full"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
-                <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-indigo-500 transition duration-300 flex flex-col justify-between">
-                    <div>
-                        <span class="text-xs font-bold uppercase tracking-widest text-pink-500 bg-pink-500/10 px-3 py-1 rounded-full">Game</span>
-                        <h3 class="text-xl font-bold mt-4 mb-2">Space Explorer</h3>
-                        <p class="text-slate-400 text-sm mb-4">Ek immersive 2D space simulation game jo aapko galaxy explore karne ka mauka deta hai.</p>
+            <div class="bg-white border border-slate-200 p-8 sm:p-12 rounded-3xl flex flex-col lg:flex-row justify-between items-start lg:items-center gap-10 shadow-sm hover:border-slate-300 transition-all duration-300">
+                <div class="max-w-2xl">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-100 text-xs font-bold text-indigo-700 mb-4 uppercase tracking-wider">
+                        Rendering Engine V2
                     </div>
-                    <a href="https://yourusername.github.io/space-explorer" target="_blank" class="text-indigo-400 font-medium inline-flex items-center hover:underline">
-                        Play Now &rarr;
+                    <h3 class="text-2xl sm:text-3xl font-black text-slate-900 mb-4">Real-Time Fluid Web Simulations</h3>
+                    <p class="text-slate-500 text-sm sm:text-base leading-relaxed font-medium">
+                        STARDUST interactive game designs prioritize advanced render mechanics, multi-platform latency scaling, and instant access architectures optimized across both cellular and workstation browsers.
+                    </p>
+                </div>
+                <div class="w-full lg:w-auto shrink-0">
+                    <a href="#" class="w-full lg:w-auto px-8 py-4 rounded-xl font-bold text-sm text-white bg-slate-900 hover:bg-indigo-600 tracking-wide text-center block transition-all duration-300 shadow-md">
+                        Initialize Simulation Node
                     </a>
                 </div>
-
-                <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-indigo-500 transition duration-300 flex flex-col justify-between">
-                    <div>
-                        <span class="text-xs font-bold uppercase tracking-widest text-indigo-500 bg-indigo-500/10 px-3 py-1 rounded-full">Web Tool</span>
-                        <h3 class="text-xl font-bold mt-4 mb-2">Stardust Utility Box</h3>
-                        <p class="text-slate-400 text-sm mb-4">Daily developers aur creators ke liye ek useful online toolset aur dashboard.</p>
-                    </div>
-                    <a href="https://yourusername.github.io/utility-box" target="_blank" class="text-indigo-400 font-medium inline-flex items-center hover:underline">
-                        Open App &rarr;
-                    </a>
-                </div>
-
-                <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-indigo-500 transition duration-300 flex flex-col justify-between">
-                    <div>
-                        <span class="text-xs font-bold uppercase tracking-widest text-emerald-500 bg-emerald-500/10 px-3 py-1 rounded-full">Website</span>
-                        <h3 class="text-xl font-bold mt-4 mb-2">Community Forum</h3>
-                        <p class="text-slate-400 text-sm mb-4">STARDUST ke users aur players ke liye ek centralized discussion aur chat board.</p>
-                    </div>
-                    <a href="https://yourusername.github.io/forum" target="_blank" class="text-indigo-400 font-medium inline-flex items-center hover:underline">
-                        Visit Site &rarr;
-                    </a>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <section id="updates" class="py-24 px-6 max-w-5xl mx-auto">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Company Updates</h2>
-            <p class="text-slate-400">STARDUST me kya naya chal raha hai?</p>
+    <section id="updates" class="py-28 px-6 max-w-4xl mx-auto">
+        <div class="text-center mb-20">
+            <span class="text-xs font-bold uppercase tracking-[0.25em] text-blue-600">Communication Node</span>
+            <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-2">Corporate Press Releases</h2>
         </div>
 
-        <div class="space-y-6">
-            <div class="bg-slate-950 p-6 rounded-lg border-l-4 border-indigo-500 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                <div>
-                    <h4 class="text-lg font-bold">New Website Launcher Coming Soon!</h4>
-                    <p class="text-slate-400 text-sm mt-1">Hum ek naya game aur web dashboard launch karne wale hain next month.</p>
-                </div>
-                <span class="text-xs text-slate-500 whitespace-nowrap">June 2026</span>
+        <div class="relative border-l border-slate-200 ml-4 sm:ml-6 space-y-12">
+            
+            <div class="relative pl-8 group">
+                <div class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-white border-2 border-blue-600 group-hover:bg-blue-600 transition-colors"></div>
+                <div class="text-[11px] font-bold text-slate-400 tracking-widest uppercase mb-2">October 24, 2026</div>
+                <h4 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">STARDUST Global Ecosystem Link System Architecture Complete</h4>
+                <p class="text-slate-500 text-sm leading-relaxed font-medium">
+                    Our technical infrastructure optimization patch is deployed across all regional static clusters. Preparation for core network routing updates has successfully completed verification protocols.
+                </p>
             </div>
 
-            <div class="bg-slate-950 p-6 rounded-lg border-l-4 border-slate-700 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                <div>
-                    <h4 class="text-lg font-bold">STARDUST Hub Live</h4>
-                    <p class="text-slate-400 text-sm mt-1">Hamari main company website ab officially GitHub Pages par live ho chuki hai.</p>
-                </div>
-                <span class="text-xs text-slate-500 whitespace-nowrap">May 2026</span>
+            <div class="relative pl-8 group">
+                <div class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-white border-2 border-slate-300 group-hover:border-blue-600 transition-colors"></div>
+                <div class="text-[11px] font-bold text-slate-400 tracking-widest uppercase mb-2">June 28, 2026</div>
+                <h4 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">STARDUST Hub Architecture Deployed Online</h4>
+                <p class="text-slate-500 text-sm leading-relaxed font-medium">
+                    The principal enterprise portal cluster framework is active under formal validation routines. Scalability metrics register baseline integrity parameters across global endpoint evaluations.
+                </p>
             </div>
+
         </div>
     </section>
 
-    <footer class="border-t border-slate-800 bg-slate-950 py-8 text-center text-slate-500 text-sm">
-        <p>&copy; 2026 STARDUST. All rights reserved.</p>
-        <p class="mt-2 text-xs text-slate-600">Made by Zishan</p>
+    <footer class="border-t border-slate-200 bg-slate-50 py-12 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center space-x-3">
+                <span class="text-base font-black tracking-widest text-slate-900 uppercase">Stardust</span>
+                <span class="text-xs text-slate-300">|</span>
+                <span class="text-xs text-slate-400 font-semibold tracking-wide uppercase">Enterprise Portfolio Cluster Platform</span>
+            </div>
+            <div class="text-xs text-slate-400 font-medium text-center md:text-right">
+                &copy; 2026 STARDUST Technologies Inc. All international rights reserved. Static infrastructure authorized operational deployment.
+            </div>
+        </div>
     </footer>
 
 </body>
